@@ -15,7 +15,7 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">Menu</li>
             <li class="{{ (Route::current() == 'admin/users')? 'active' : '' }}">
-                <a href="#">
+                <a href="{{route('admin.User.index')}}">
                     <i class="fa fa-user-plus"></i> <span>Users management</span>
                 </a>
             </li>
