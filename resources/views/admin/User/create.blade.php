@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <form method="post" action="{{ route('admin.User.create') }}">
+                        <form method="post" action="{{ route('admin.user.create') }}">
                             {{ csrf_field() }}
                             @if ($users)
                                 <input type="hidden" name="id" value="{{ $users->id }}" />

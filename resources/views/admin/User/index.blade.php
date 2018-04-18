@@ -10,22 +10,22 @@
                     </div>
 
                     <div class="panel-body">
-                        @if (session('success'))
-                            <div class="alert alert-success">
-                                {{ session('success') }}
-                            </div>
-                        @endif
-                        @if (session('error'))
-                            <div class="alert alert-success">
-                                {{ session('error') }}
-                            </div>
-                        @endif
+                        {{--@if (session('success'))--}}
+                            {{--<div class="alert alert-success">--}}
+                                {{--{{ session('success') }}--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
+                        {{--@if (session('error'))--}}
+                            {{--<div class="alert alert-success">--}}
+                                {{--{{ session('error') }}--}}
+                            {{--</div>--}}
+                        {{--@endif--}}
                         <div>
-                            <a href="{{ route('admin.User.create') }}">
+                            <a href="{{ route('admin.user.create') }}">
                                 <button type="button" class="btn btn-success btn-xs">Create New User</button>
                             </a>
                         </div>
-                        <form class="" action="{{ route('admin.User.destroy') }}" method="POST">
+                        <form class="" action="{{ route('admin.user.destroy') }}" method="POST">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                             <table class="table table-striped task-table">
@@ -52,7 +52,7 @@
                                         {{--</td>--}}
 
                                         <td>
-                                            <a href="{{ route('admin.User.edit', $user->id) }}">
+                                            <a href="{{ route('admin.user.edit', $user->id) }}">
                                                 <button type="button" class="btn btn-primary btn-xs">Edit</button>
                                             </a>
 
@@ -68,7 +68,7 @@
                                 </tbody>
 
                             </table>
-                            <input class="btn btn-danger"  type="submit"  value="Delete" style="margin-right: 75px; float: right;">
+                            <input class="btn btn-danger"  type="submit" onclick="return confirm('Are you sure you want to delete this item?');" value="Delete" style="margin-right: 75px; float: right;">
                         </form>
                         <div class="text-center">
                             {{--{{ $users->render() }}--}}
