@@ -20,7 +20,6 @@ class UsersTableSeeder extends Seeder
                 'email' => 'root@gmail.com',
                 'password' =>  Hash::make('123456'),
                 'first_login' => false,
-                'category_id'=> null,
                 'created_at' => Carbon::now(),
             ],
             [
@@ -29,7 +28,6 @@ class UsersTableSeeder extends Seeder
                 'email' => 'secrectory@gmail.com',
                 'password' =>  Hash::make('123456'),
                 'first_login' => false,
-                'category_id'=> '[1,2,3]',
                 'created_at' => Carbon::now(),
             ],
             [
@@ -38,7 +36,6 @@ class UsersTableSeeder extends Seeder
                 'email' => 'editor@gmail.com',
                 'password' =>  Hash::make('123456'),
                 'first_login' => false,
-                'category_id'=> null,
                 'created_at' => Carbon::now(),
             ],
             [
